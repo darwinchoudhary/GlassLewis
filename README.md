@@ -19,6 +19,7 @@ You will need to run following script to create a database and server should be 
 Or you can change the server, username & password according to your machine :)
 
 SQL Script: 
+
 -- Create the database
 
 CREATE DATABASE IF NOT EXISTS CompanyDatabase;
