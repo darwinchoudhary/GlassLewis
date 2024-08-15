@@ -46,6 +46,7 @@ Use the below payload:
 
 this should return a token.
 (For the sake of simplicity and not creating another database to store users I have hardcoded user credentials in the code, Of course the connection string and user credentials will never be visible in production code :) )
+
 You can click on Authorize button below on Swagger to automatically add Authorization header to subsequent api requests to CompanyController
 <img width="1465" alt="Screenshot 2024-08-15 at 18 59 10" src="https://github.com/user-attachments/assets/4fcae904-1cec-497c-826a-5663d75e05d9">
 You must follow the format of "Bearer <your-jwt-token>"
