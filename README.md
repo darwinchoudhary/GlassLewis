@@ -11,19 +11,26 @@ You can run GlassLewisWebApi project and it should automatically Swagger index p
 
 MySQL database: 
 You will need to run following script to create a database and server should be defined as below as mentioned in the connection string: 
+
 "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=CompanyDatabase;User=root;Password=root;"
 }
+
 Or you can change the server, username & password according to your machine :)
 
 SQL Script: 
 -- Create the database
+
 CREATE DATABASE IF NOT EXISTS CompanyDatabase;
 
+
 -- Switch to the database
+
 USE CompanyDatabase;
 
+
 -- Create the Companies table
+
 CREATE TABLE Companies (
     Id INT PRIMARY KEY auto_increment,
     Name VARCHAR(255) NOT NULL,
@@ -33,16 +40,20 @@ CREATE TABLE Companies (
     Website VARCHAR(255),
     CONSTRAINT UC_Isin UNIQUE (Isin)
 );
+
 ----END OF SQL SCRIPT--------
 
 AUTHENTICATION: 
+
 CompanyController can't be used without Authorization. 
 You can get JWT token using api/Auth/login endpoint.
 Use the below payload: 
+
 {
   "username": "testuser",
   "password": "testpassword"
 }
+
 
 this should return a token.
 (For the sake of simplicity and not creating another database to store users I have hardcoded user credentials in the code, Of course the connection string and user credentials will never be visible in production code :) )
